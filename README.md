@@ -1,6 +1,8 @@
-# Book-to-Moral pipeline
+# Book-to-Moral pipeline (small)
 
-A command-line workflow that reads the moral values out of books at scale.
+A command-line workflow that generates moral values from books at scale. 
+
+It includes options to use multiple models for story moral generation and value labeling and different input types (full text, event summary, short summary).
 
 **Input.** A folder of plain-text books — one `.txt` file per book. The only
 identifier recorded is `book_id` (the filename stem); join any metadata
@@ -8,13 +10,12 @@ identifier recorded is `book_id` (the filename stem); join any metadata
 
 **What it does.** For every book, the pipeline:
 
-1. **Summarizes** the full text — first into a chunk-by-chunk plot summary, then
-   condenses that into a one-paragraph summary.
+1. **Summarizes** the full text in two versions — 1) into event based summaries based on book chunks which are then concatenated and 2) then a one-paragraph summary using #1 as input (not the full text).
 2. **Generates morals** — three short, pithy "morals of the story" from each of
-   three views of the book: its *full text*, its *chunk summary*, and its *short
+   three input representations of the book: its *full text*, its *chunk summary*, and its *short
    summary*.
 3. **Labels values** — tags each moral with values from a fixed 62-label
-   taxonomy (e.g. *Care*, *Justice*, *Loyalty*).
+   taxonomy (e.g. *Care*, *Justice*, *Loyalty*) based on an expanded collection of Rokeach's values which have been mapped to the ten canonical Schwartz's Values. 
 
 Multiple models can run each step, so you can compare how different models read
 the same book. Every step is cached, so reruns resume where they left off.
