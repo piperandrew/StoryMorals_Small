@@ -35,7 +35,7 @@ its unique values, and a per-book table of the summaries themselves.
 | `run_pipeline.py` | The orchestrator: discovery, the per-book DAG, caching, checkpoint/resume, fail-soft error handling, progress logging, and the final table. CLI entry point. |
 | `Values_Taxonomy.csv` | The value taxonomy. Column 1 (`rokeach_value`, 62 labels) is the label set; column 2 (`schwartz_value`) is the downstream grouping. |
 | `requirements.txt` | Python dependencies. |
-| `example/` | A synthetic, copyright-free book + illustrative sample output (see `example/README.md`). |
+| `example/` | A synthetic text + illustrative sample output (see `example/README.md`). |
 
 > **Inputs and outputs are not in this repo.** The book corpus is copyrighted,
 > and the `work/`/`output/` artifacts are derived from it; both are gitignored.
