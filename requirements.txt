@@ -1,0 +1,7 @@
+# Book-to-Moral pipeline dependencies
+# Install with:  pip install -r requirements.txt
+openai>=1.0
+tiktoken>=0.7
+pandas>=2.0
+pyarrow>=14.0      # enables the .parquet outputs (optional but recommended)
+requests>=2.28     # used for the Anthropic / Gemini / Qwen endpoints
