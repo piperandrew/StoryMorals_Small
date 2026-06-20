@@ -2,9 +2,9 @@
 
 A command-line workflow that reads the moral values out of books at scale.
 
-**Input.** A folder of plain-text books — one `.txt` file per book. Each file's
-name encodes its `book_id` (the filename) and a `culture` code (the prefix
-before the first underscore, e.g. `DE_…`, `JP_…`).
+**Input.** A folder of plain-text books — one `.txt` file per book. The only
+identifier recorded is `book_id` (the filename stem); join any metadata
+(author, language, year, …) to that yourself downstream.
 
 **What it does.** For every book, the pipeline:
 
@@ -75,10 +75,8 @@ each moral against the taxonomy (K order-randomized runs per labeling model).
 > The **ensemble** (chunk ∪ short) condition is intentionally **not** produced
 > here — it is computed downstream in R as a row-union of core labels.
 
-`book_id` = the `.txt` filename stem. `culture` = the filename prefix before the
-first underscore. The input directory is **flat** (no per-culture
-subdirectories); culture is read from the prefix — e.g. `DE_…`, `JP_…`, `IN_…`
-yield cultures `DE`, `JP`, `IN`.
+`book_id` = the `.txt` filename stem. The input directory is **flat** (one
+`.txt` per book); no other metadata is read from the filename or path.
 
 ---
 
@@ -119,7 +117,7 @@ Mock stubs every API call with deterministic output and writes to
 ```bash
 python3 run_pipeline.py --limit 1            # or --books <book_stem>
 ```
-Inspect `work/<culture>/<book_stem>/` and `output/book_to_moral_long.csv`
+Inspect `work/<book_stem>/` and `output/book_to_moral_long.csv`
 before scaling up.
 
 ### 4. Full corpus
@@ -140,14 +138,13 @@ Resumable: rerun the same command and completed work is skipped.
 | `--moral-models` | `gpt-5.4,gemini-3.1-pro-preview` | Comma-separated Stage C generators. Each adds a `moral_model`. |
 | `--labeling-models` | `gpt-5.4,gemini-3.1-pro-preview` | Comma-separated Stage D labelers (e.g. add `claude-sonnet-4-6`). Each adds a `label_model`; full cross with the generators. |
 | `--k` | `1` | Label-order randomizations per moral. K>1 adds rows (one `run_seed` each). |
-| `--language` | `English` | Moral output language. Use `__native__` to map each culture to a language via the `native_language` dict in `pipeline_config.py` (cultures not in the map fall back to English). |
+| `--language` | `English` | Output language for the generated morals (applied to all books). |
 | `--run-seed` | `20240601` | Master seed. Per-row label-shuffle seeds are derived deterministically from it (reproducible across reruns). |
 | `--throttle-rps` | `5` | Global request rate cap (from `THROTTLE_RPS`). |
 | `--max-active` | `8` | Concurrency budget (from `MAX_ACTIVE`); see note below. |
 | `--drop-temperature` | off | Omit the `temperature` field (for gpt-5.x "thinking" models that reject it). |
 | `--conditions` | `full_text,chunk_summary,short_summary` | Which conditions to build. |
 | `--books` | all | Comma-separated stems/filenames to run. |
-| `--culture` | all | Comma-separated culture codes (the filename prefixes, e.g. `DE,JP,IN`). |
 | `--limit N` | none | Process at most N books. |
 | `--mock` | off | Stub all API calls; write to `*_mock` dirs. |
 | `--rebuild` | off | Ignore the completed-book skip; rebuild the whole table from the `work/` cache (use after changing `--k`/`--labeling-models`). |
@@ -168,7 +165,6 @@ One row per assigned value:
 | column | notes |
 |--------|-------|
 | `book_id` | filename stem |
-| `culture` | filename prefix code (e.g. `DE`, `JP`, `IN`) |
 | `input_condition` | `full_text` \| `chunk_summary` \| `short_summary` |
 | `moral_index` | `1`–`3` |
 | `moral_text` | the moral string |
@@ -191,7 +187,7 @@ comma-separated. Drops `label_model`, `run_seed`, `timestamp`.
 
 | column | notes |
 |--------|-------|
-| `book_id`, `culture`, `input_condition`, `moral_index`, `moral_text` | as in the long table |
+| `book_id`, `input_condition`, `moral_index`, `moral_text` | as in the long table |
 | `value_label` | comma-separated unique labels across label models (empty if none) |
 | `moral_model` | which model generated the moral |
 
@@ -204,11 +200,10 @@ One row per book, for auditing the inputs to the moral stage:
 | column | notes |
 |--------|-------|
 | `book_id` | filename stem |
-| `culture` | filename prefix code (e.g. `DE`, `JP`, `IN`) |
 | `chunk_summary` | the aggregated Stage A chunk summary |
 | `short_summary` | the Stage B one-paragraph condensation |
 
-### Cached intermediates (auditable, resumable) — under `work/{culture}/{book_id}/`
+### Cached intermediates (auditable, resumable) — under `work/{book_id}/`
 ```
 chunk_summary.txt          # Stage A output
 short_summary.txt          # Stage B output

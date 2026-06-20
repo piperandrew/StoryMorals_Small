@@ -1,91 +1,91 @@
-book_id,culture,input_condition,moral_index,moral_text,value_label,moral_model,label_model,run_seed,timestamp
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gpt-5.4,145598883,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,Compassion,gpt-5.4,gpt-5.4,145598883,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,Solidarity,gpt-5.4,gpt-5.4,145598883,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gemini-3.1-pro-preview,145598883,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,Kindness,gpt-5.4,gemini-3.1-pro-preview,145598883,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,Belonging,gpt-5.4,gemini-3.1-pro-preview,145598883,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gpt-5.4,1890259156,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Duty,gpt-5.4,gpt-5.4,1890259156,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Solidarity,gpt-5.4,gpt-5.4,1890259156,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gemini-3.1-pro-preview,1890259156,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Care,gpt-5.4,gemini-3.1-pro-preview,1890259156,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gpt-5.4,3830811418,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Kindness offered in the dark outlives the one who offers it.,Compassion,gpt-5.4,gpt-5.4,3830811418,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gemini-3.1-pro-preview,3830811418,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Kindness offered in the dark outlives the one who offers it.,Love,gpt-5.4,gemini-3.1-pro-preview,3830811418,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Kindness offered in the dark outlives the one who offers it.,Redemption,gpt-5.4,gemini-3.1-pro-preview,3830811418,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gpt-5.4,3272645539,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,"Quiet, steady care can save more than grand gestures.",Humility,gemini-3.1-pro-preview,gpt-5.4,3272645539,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3272645539,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,"Quiet, steady care can save more than grand gestures.",Compassion,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3272645539,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,1,"Quiet, steady care can save more than grand gestures.",Resilience,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3272645539,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gpt-5.4,4173579565,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Faith,gemini-3.1-pro-preview,gpt-5.4,4173579565,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4173579565,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4173579565,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gpt-5.4,4067704950,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Integrity,gemini-3.1-pro-preview,gpt-5.4,4067704950,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4067704950,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4067704950,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Recognition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4067704950,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gpt-5.4,3301328033,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Compassion,gpt-5.4,gpt-5.4,3301328033,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Solidarity,gpt-5.4,gpt-5.4,3301328033,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gemini-3.1-pro-preview,3301328033,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Kindness,gpt-5.4,gemini-3.1-pro-preview,3301328033,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Belonging,gpt-5.4,gemini-3.1-pro-preview,3301328033,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gpt-5.4,1153019469,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Duty,gpt-5.4,gpt-5.4,1153019469,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Solidarity,gpt-5.4,gpt-5.4,1153019469,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gemini-3.1-pro-preview,1153019469,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Care,gpt-5.4,gemini-3.1-pro-preview,1153019469,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gpt-5.4,2591974399,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Compassion,gpt-5.4,gpt-5.4,2591974399,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gemini-3.1-pro-preview,2591974399,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Love,gpt-5.4,gemini-3.1-pro-preview,2591974399,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Redemption,gpt-5.4,gemini-3.1-pro-preview,2591974399,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gpt-5.4,2464892922,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Humility,gemini-3.1-pro-preview,gpt-5.4,2464892922,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gemini-3.1-pro-preview,2464892922,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Compassion,gemini-3.1-pro-preview,gemini-3.1-pro-preview,2464892922,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Resilience,gemini-3.1-pro-preview,gemini-3.1-pro-preview,2464892922,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gpt-5.4,315993355,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Faith,gemini-3.1-pro-preview,gpt-5.4,315993355,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,315993355,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,315993355,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gpt-5.4,3315083312,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Integrity,gemini-3.1-pro-preview,gpt-5.4,3315083312,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3315083312,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3315083312,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Recognition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3315083312,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gpt-5.4,4006415692,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,Compassion,gpt-5.4,gpt-5.4,4006415692,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,Solidarity,gpt-5.4,gpt-5.4,4006415692,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gemini-3.1-pro-preview,4006415692,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,Kindness,gpt-5.4,gemini-3.1-pro-preview,4006415692,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,Belonging,gpt-5.4,gemini-3.1-pro-preview,4006415692,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gpt-5.4,2956959849,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Duty,gpt-5.4,gpt-5.4,2956959849,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Solidarity,gpt-5.4,gpt-5.4,2956959849,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gemini-3.1-pro-preview,2956959849,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Care,gpt-5.4,gemini-3.1-pro-preview,2956959849,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gpt-5.4,1955794220,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Compassion,gpt-5.4,gpt-5.4,1955794220,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gemini-3.1-pro-preview,1955794220,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Love,gpt-5.4,gemini-3.1-pro-preview,1955794220,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Redemption,gpt-5.4,gemini-3.1-pro-preview,1955794220,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gpt-5.4,1674391826,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,"Quiet, steady care can save more than grand gestures.",Humility,gemini-3.1-pro-preview,gpt-5.4,1674391826,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gemini-3.1-pro-preview,1674391826,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,"Quiet, steady care can save more than grand gestures.",Compassion,gemini-3.1-pro-preview,gemini-3.1-pro-preview,1674391826,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,1,"Quiet, steady care can save more than grand gestures.",Resilience,gemini-3.1-pro-preview,gemini-3.1-pro-preview,1674391826,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gpt-5.4,3575703705,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Faith,gemini-3.1-pro-preview,gpt-5.4,3575703705,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3575703705,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3575703705,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gpt-5.4,212050006,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Integrity,gemini-3.1-pro-preview,gpt-5.4,212050006,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gemini-3.1-pro-preview,212050006,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,212050006,2026-06-20T00:00:00+00:00
-EX_TheLamplighter,EX,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Recognition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,212050006,2026-06-20T00:00:00+00:00
+book_id,input_condition,moral_index,moral_text,value_label,moral_model,label_model,run_seed,timestamp
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gpt-5.4,145598883,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,Compassion,gpt-5.4,gpt-5.4,145598883,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,Solidarity,gpt-5.4,gpt-5.4,145598883,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gemini-3.1-pro-preview,145598883,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,Kindness,gpt-5.4,gemini-3.1-pro-preview,145598883,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,Belonging,gpt-5.4,gemini-3.1-pro-preview,145598883,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gpt-5.4,1890259156,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Duty,gpt-5.4,gpt-5.4,1890259156,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Solidarity,gpt-5.4,gpt-5.4,1890259156,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gemini-3.1-pro-preview,1890259156,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.",Care,gpt-5.4,gemini-3.1-pro-preview,1890259156,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gpt-5.4,3830811418,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Kindness offered in the dark outlives the one who offers it.,Compassion,gpt-5.4,gpt-5.4,3830811418,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gemini-3.1-pro-preview,3830811418,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Kindness offered in the dark outlives the one who offers it.,Love,gpt-5.4,gemini-3.1-pro-preview,3830811418,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Kindness offered in the dark outlives the one who offers it.,Redemption,gpt-5.4,gemini-3.1-pro-preview,3830811418,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gpt-5.4,3272645539,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,"Quiet, steady care can save more than grand gestures.",Humility,gemini-3.1-pro-preview,gpt-5.4,3272645539,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3272645539,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,"Quiet, steady care can save more than grand gestures.",Compassion,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3272645539,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,1,"Quiet, steady care can save more than grand gestures.",Resilience,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3272645539,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gpt-5.4,4173579565,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Faith,gemini-3.1-pro-preview,gpt-5.4,4173579565,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4173579565,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.",Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4173579565,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gpt-5.4,4067704950,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Integrity,gemini-3.1-pro-preview,gpt-5.4,4067704950,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4067704950,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4067704950,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,full_text,3,Those who seize credit are forgotten; those who light the way endure.,Recognition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,4067704950,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gpt-5.4,3301328033,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Compassion,gpt-5.4,gpt-5.4,3301328033,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Solidarity,gpt-5.4,gpt-5.4,3301328033,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gemini-3.1-pro-preview,3301328033,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Kindness,gpt-5.4,gemini-3.1-pro-preview,3301328033,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,Belonging,gpt-5.4,gemini-3.1-pro-preview,3301328033,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gpt-5.4,1153019469,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Duty,gpt-5.4,gpt-5.4,1153019469,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Solidarity,gpt-5.4,gpt-5.4,1153019469,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gemini-3.1-pro-preview,1153019469,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Care,gpt-5.4,gemini-3.1-pro-preview,1153019469,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gpt-5.4,2591974399,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Compassion,gpt-5.4,gpt-5.4,2591974399,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gemini-3.1-pro-preview,2591974399,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Love,gpt-5.4,gemini-3.1-pro-preview,2591974399,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,Redemption,gpt-5.4,gemini-3.1-pro-preview,2591974399,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gpt-5.4,2464892922,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Humility,gemini-3.1-pro-preview,gpt-5.4,2464892922,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gemini-3.1-pro-preview,2464892922,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Compassion,gemini-3.1-pro-preview,gemini-3.1-pro-preview,2464892922,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,1,"Quiet, steady care can save more than grand gestures.",Resilience,gemini-3.1-pro-preview,gemini-3.1-pro-preview,2464892922,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gpt-5.4,315993355,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Faith,gemini-3.1-pro-preview,gpt-5.4,315993355,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,315993355,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,315993355,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gpt-5.4,3315083312,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Integrity,gemini-3.1-pro-preview,gpt-5.4,3315083312,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3315083312,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3315083312,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,Recognition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3315083312,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gpt-5.4,4006415692,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,Compassion,gpt-5.4,gpt-5.4,4006415692,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,Solidarity,gpt-5.4,gpt-5.4,4006415692,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,Care,gpt-5.4,gemini-3.1-pro-preview,4006415692,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,Kindness,gpt-5.4,gemini-3.1-pro-preview,4006415692,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,Belonging,gpt-5.4,gemini-3.1-pro-preview,4006415692,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gpt-5.4,2956959849,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Duty,gpt-5.4,gpt-5.4,2956959849,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Solidarity,gpt-5.4,gpt-5.4,2956959849,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Humility,gpt-5.4,gemini-3.1-pro-preview,2956959849,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.",Care,gpt-5.4,gemini-3.1-pro-preview,2956959849,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gpt-5.4,1955794220,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Compassion,gpt-5.4,gpt-5.4,1955794220,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Kindness,gpt-5.4,gemini-3.1-pro-preview,1955794220,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Love,gpt-5.4,gemini-3.1-pro-preview,1955794220,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Kindness offered in the dark outlives the one who offers it.,Redemption,gpt-5.4,gemini-3.1-pro-preview,1955794220,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gpt-5.4,1674391826,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,"Quiet, steady care can save more than grand gestures.",Humility,gemini-3.1-pro-preview,gpt-5.4,1674391826,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,"Quiet, steady care can save more than grand gestures.",Care,gemini-3.1-pro-preview,gemini-3.1-pro-preview,1674391826,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,"Quiet, steady care can save more than grand gestures.",Compassion,gemini-3.1-pro-preview,gemini-3.1-pro-preview,1674391826,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,1,"Quiet, steady care can save more than grand gestures.",Resilience,gemini-3.1-pro-preview,gemini-3.1-pro-preview,1674391826,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gpt-5.4,3575703705,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Faith,gemini-3.1-pro-preview,gpt-5.4,3575703705,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Respect for Tradition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3575703705,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.",Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,3575703705,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gpt-5.4,212050006,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Integrity,gemini-3.1-pro-preview,gpt-5.4,212050006,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Humility,gemini-3.1-pro-preview,gemini-3.1-pro-preview,212050006,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Wisdom,gemini-3.1-pro-preview,gemini-3.1-pro-preview,212050006,2026-06-20T00:00:00+00:00
+EX_TheLamplighter,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,Recognition,gemini-3.1-pro-preview,gemini-3.1-pro-preview,212050006,2026-06-20T00:00:00+00:00

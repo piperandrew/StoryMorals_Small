@@ -170,13 +170,9 @@ class Config:
     chunk_max_tokens: int = CHUNK_MAX_TOKENS
 
     # --- Stage C ---
-    language: str = "English"         # default output language for the morals
+    language: str = "English"         # output language for the morals (all books)
     n_morals: int = N_MORALS
-    # Per-culture native-language map, used only when language == "__native__".
-    native_language: dict = field(
-        default_factory=lambda: {"DE": "German", "JP": "Japanese"}
-    )
-    moral_delay_seconds: float = 1.0  # storyMorals_API.R delay_seconds
+    moral_delay_seconds: float = 1.0  # pause between moral-generation calls
 
     # --- Stage D ---
     k: int = 1                        # label-order randomizations per moral
@@ -223,9 +219,3 @@ class Config:
         if self.mock:
             self.work_dir = self.work_dir.with_name(self.work_dir.name + "_mock")
             self.output_dir = self.output_dir.with_name(self.output_dir.name + "_mock")
-
-    def language_for_culture(self, culture: str) -> str:
-        """Resolve the moral-generation language for a given culture code."""
-        if self.language == "__native__":
-            return self.native_language.get(culture, "English")
-        return self.language

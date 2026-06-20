@@ -97,11 +97,6 @@ def _morals_fingerprint(morals_by_model: dict) -> str:
     return _hash(json.dumps(flat, ensure_ascii=False, sort_keys=True))
 
 
-def culture_of(book_id: str) -> str:
-    """Culture/language code = filename prefix before the first underscore."""
-    return book_id.split("_", 1)[0] if "_" in book_id else "UNK"
-
-
 def input_type_for(condition: str) -> str:
     # full_text -> the "fulltext" prompt; the two summaries -> the "summary" prompt.
     return "fulltext" if condition == "full_text" else "summary"
@@ -110,31 +105,30 @@ def input_type_for(condition: str) -> str:
 # ---------------------------------------------------------------------------
 # Output tables: schema + atomic, per-book checkpointing + restart loading
 # ---------------------------------------------------------------------------
-LONG_COLUMNS = ["book_id", "culture", "input_condition", "moral_index",
+LONG_COLUMNS = ["book_id", "input_condition", "moral_index",
                 "moral_text", "value_label", "moral_model", "label_model",
                 "run_seed", "timestamp"]
-SUMMARY_COLUMNS = ["book_id", "culture", "chunk_summary", "short_summary"]
+SUMMARY_COLUMNS = ["book_id", "chunk_summary", "short_summary"]
 
 # Collapsed table: one row per (moral_text x moral_model), with value_label =
 # the unique value labels pooled across ALL label models for that moral.
-UNIQUE_COLUMNS = ["book_id", "culture", "input_condition", "moral_index",
+UNIQUE_COLUMNS = ["book_id", "input_condition", "moral_index",
                   "moral_text", "value_label", "moral_model"]
 
 
 def collapse_unique(df):
     """Derive the one-row-per-moral table.
 
-    Groups by (book, culture, condition, moral_index, moral_text, moral_model)
-    and concatenates the DISTINCT value_labels assigned by every label model
-    into one comma-separated string. Drops label_model / run_seed / timestamp.
+    Groups by (book, condition, moral_index, moral_text, moral_model) and
+    concatenates the DISTINCT value_labels assigned by every label model into
+    one comma-separated string. Drops label_model / run_seed / timestamp.
     A moral with no labels keeps one row with an empty value_label.
     """
     if df.empty:
         return pd.DataFrame(columns=UNIQUE_COLUMNS)
     # Works on the new schema (moral_model) or the old single-model one (model).
     mm = "moral_model" if "moral_model" in df.columns else "model"
-    keys = ["book_id", "culture", "input_condition", "moral_index",
-            "moral_text", mm]
+    keys = ["book_id", "input_condition", "moral_index", "moral_text", mm]
 
     def join_unique(s):
         vals = sorted({str(x).strip() for x in s.dropna() if str(x).strip()})
@@ -342,7 +336,7 @@ def get_values(morals_by_model, condition, label_list, book_dir, book_id, cfg) -
 # ---------------------------------------------------------------------------
 # Per-book DAG -> long rows
 # ---------------------------------------------------------------------------
-def rows_from_records(book_id, culture, condition, morals_by_model, records) -> list[dict]:
+def rows_from_records(book_id, condition, morals_by_model, records) -> list[dict]:
     """Expand label records into tidy long rows (one row per assigned value;
     one NA row when a (moral_model, moral, label_model, run) produced zero labels)."""
     rows = []
@@ -354,7 +348,6 @@ def rows_from_records(book_id, culture, condition, morals_by_model, records) -> 
         labels = r.get("labels") or []
         base = {
             "book_id": book_id,
-            "culture": culture,
             "input_condition": condition,
             "moral_index": mi,
             "moral_text": moral_text,
@@ -374,8 +367,7 @@ def rows_from_records(book_id, culture, condition, morals_by_model, records) -> 
 def process_book(book_path: Path, cfg, label_list):
     """Return (long_rows, summary_record) for one book."""
     book_id = book_path.stem
-    culture = culture_of(book_id)
-    book_dir = cfg.work_dir / culture / book_id
+    book_dir = cfg.work_dir / book_id
     rows = []
 
     full_text = S.read_text_file(book_path)
@@ -383,7 +375,6 @@ def process_book(book_path: Path, cfg, label_list):
     short_summary = get_short_summary(chunk_summary, book_dir, book_id, cfg)
     summary_record = {
         "book_id": book_id,
-        "culture": culture,
         "chunk_summary": chunk_summary,
         "short_summary": short_summary,
     }
@@ -393,18 +384,17 @@ def process_book(book_path: Path, cfg, label_list):
         "chunk_summary": chunk_summary,
         "short_summary": short_summary,
     }
-    language = cfg.language_for_culture(culture)
 
     for condition in cfg.conditions:
         morals_by_model = get_morals(condition_input[condition], condition,
-                                     language, book_dir, book_id, cfg)
+                                     cfg.language, book_dir, book_id, cfg)
         if not any(morals_by_model.values()):
             log_error(cfg, book_id, f"morals[{condition}]", "no morals parsed")
             log(book_id, f"morals[{condition}]", "SKIP (empty)")
             continue
         records = get_values(morals_by_model, condition, label_list,
                              book_dir, book_id, cfg)
-        rows.extend(rows_from_records(book_id, culture, condition,
+        rows.extend(rows_from_records(book_id, condition,
                                       morals_by_model, records))
 
     return rows, summary_record
@@ -413,10 +403,8 @@ def process_book(book_path: Path, cfg, label_list):
 # ---------------------------------------------------------------------------
 # Discovery + driver
 # ---------------------------------------------------------------------------
-def discover_books(cfg, books_filter=None, culture_filter=None, limit=None):
+def discover_books(cfg, books_filter=None, limit=None):
     files = sorted(cfg.input_dir.glob("*.txt"))
-    if culture_filter:
-        files = [f for f in files if culture_of(f.stem) in culture_filter]
     if books_filter:
         wanted = set(books_filter)
         files = [f for f in files if f.stem in wanted or f.name in wanted]
@@ -437,10 +425,10 @@ def run_signature(cfg) -> dict:
     }
 
 
-def run(cfg, books_filter=None, culture_filter=None, limit=None):
+def run(cfg, books_filter=None, limit=None):
     cfg.output_dir.mkdir(parents=True, exist_ok=True)
     label_list = S.load_label_list(cfg)
-    books = discover_books(cfg, books_filter, culture_filter, limit)
+    books = discover_books(cfg, books_filter, limit)
 
     # Detect a configuration change vs the previous output in this dir. If the
     # config differs (or the prior output predates run_config.json), appending
@@ -540,7 +528,7 @@ def parse_args(argv=None):
     p.add_argument("--k", type=int, default=1,
                    help="label-order randomizations per moral")
     p.add_argument("--language", default="English",
-                   help="moral output language, or '__native__' for per-culture")
+                   help="output language for the generated morals (all books)")
     p.add_argument("--run-seed", type=int, default=20240601)
     p.add_argument("--throttle-rps", type=float, default=5.0)
     p.add_argument("--max-active", type=int, default=8)
@@ -549,8 +537,6 @@ def parse_args(argv=None):
     p.add_argument("--conditions", default=",".join(C.CONDITIONS))
     p.add_argument("--books", default=None,
                    help="comma-separated book stems/filenames to run")
-    p.add_argument("--culture", default=None,
-                   help="comma-separated culture codes to include (e.g. DE,JP)")
     p.add_argument("--limit", type=int, default=None,
                    help="process at most N books (handy for the single-book test)")
     p.add_argument("--mock", action="store_true",
@@ -592,10 +578,7 @@ def main(argv=None):
     a = parse_args(argv)
     cfg = cfg_from_args(a)
     books_filter = [b.strip() for b in a.books.split(",")] if a.books else None
-    culture_filter = ([c.strip() for c in a.culture.split(",")]
-                      if a.culture else None)
-    run(cfg, books_filter=books_filter, culture_filter=culture_filter,
-        limit=a.limit)
+    run(cfg, books_filter=books_filter, limit=a.limit)
 
 
 if __name__ == "__main__":

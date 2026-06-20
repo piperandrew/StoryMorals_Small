@@ -1,19 +1,19 @@
-book_id,culture,input_condition,moral_index,moral_text,value_label,moral_model
-EX_TheLamplighter,EX,chunk_summary,1,"Quiet, steady care can save more than grand gestures.","Care, Compassion, Humility, Resilience",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.","Faith, Respect for Tradition, Wisdom",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,"Humility, Integrity, Recognition, Wisdom",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,chunk_summary,1,A small light kept burning is a promise that someone still cares.,"Belonging, Care, Compassion, Kindness, Solidarity",gpt-5.4
-EX_TheLamplighter,EX,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.","Care, Duty, Humility, Solidarity",gpt-5.4
-EX_TheLamplighter,EX,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,"Compassion, Kindness, Love, Redemption",gpt-5.4
-EX_TheLamplighter,EX,full_text,1,"Quiet, steady care can save more than grand gestures.","Care, Compassion, Humility, Resilience",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.","Faith, Respect for Tradition, Wisdom",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,full_text,3,Those who seize credit are forgotten; those who light the way endure.,"Humility, Integrity, Recognition, Wisdom",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,full_text,1,A small light kept burning is a promise that someone still cares.,"Belonging, Care, Compassion, Kindness, Solidarity",gpt-5.4
-EX_TheLamplighter,EX,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.","Care, Duty, Humility, Solidarity",gpt-5.4
-EX_TheLamplighter,EX,full_text,3,Kindness offered in the dark outlives the one who offers it.,"Compassion, Kindness, Love, Redemption",gpt-5.4
-EX_TheLamplighter,EX,short_summary,1,"Quiet, steady care can save more than grand gestures.","Care, Compassion, Humility, Resilience",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.","Faith, Respect for Tradition, Wisdom",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,"Humility, Integrity, Recognition, Wisdom",gemini-3.1-pro-preview
-EX_TheLamplighter,EX,short_summary,1,A small light kept burning is a promise that someone still cares.,"Belonging, Care, Compassion, Kindness, Solidarity",gpt-5.4
-EX_TheLamplighter,EX,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.","Care, Duty, Humility, Solidarity",gpt-5.4
-EX_TheLamplighter,EX,short_summary,3,Kindness offered in the dark outlives the one who offers it.,"Compassion, Kindness, Love, Redemption",gpt-5.4
+book_id,input_condition,moral_index,moral_text,value_label,moral_model
+EX_TheLamplighter,chunk_summary,1,"Quiet, steady care can save more than grand gestures.","Care, Compassion, Humility, Resilience",gemini-3.1-pro-preview
+EX_TheLamplighter,chunk_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.","Faith, Respect for Tradition, Wisdom",gemini-3.1-pro-preview
+EX_TheLamplighter,chunk_summary,3,Those who seize credit are forgotten; those who light the way endure.,"Humility, Integrity, Recognition, Wisdom",gemini-3.1-pro-preview
+EX_TheLamplighter,chunk_summary,1,A small light kept burning is a promise that someone still cares.,"Belonging, Care, Compassion, Kindness, Solidarity",gpt-5.4
+EX_TheLamplighter,chunk_summary,2,"True service is often unseen and unthanked, yet it holds a community together.","Care, Duty, Humility, Solidarity",gpt-5.4
+EX_TheLamplighter,chunk_summary,3,Kindness offered in the dark outlives the one who offers it.,"Compassion, Kindness, Love, Redemption",gpt-5.4
+EX_TheLamplighter,full_text,1,"Quiet, steady care can save more than grand gestures.","Care, Compassion, Humility, Resilience",gemini-3.1-pro-preview
+EX_TheLamplighter,full_text,2,"A tradition's worth is the hope it carries, not the tool it uses.","Faith, Respect for Tradition, Wisdom",gemini-3.1-pro-preview
+EX_TheLamplighter,full_text,3,Those who seize credit are forgotten; those who light the way endure.,"Humility, Integrity, Recognition, Wisdom",gemini-3.1-pro-preview
+EX_TheLamplighter,full_text,1,A small light kept burning is a promise that someone still cares.,"Belonging, Care, Compassion, Kindness, Solidarity",gpt-5.4
+EX_TheLamplighter,full_text,2,"True service is often unseen and unthanked, yet it holds a community together.","Care, Duty, Humility, Solidarity",gpt-5.4
+EX_TheLamplighter,full_text,3,Kindness offered in the dark outlives the one who offers it.,"Compassion, Kindness, Love, Redemption",gpt-5.4
+EX_TheLamplighter,short_summary,1,"Quiet, steady care can save more than grand gestures.","Care, Compassion, Humility, Resilience",gemini-3.1-pro-preview
+EX_TheLamplighter,short_summary,2,"A tradition's worth is the hope it carries, not the tool it uses.","Faith, Respect for Tradition, Wisdom",gemini-3.1-pro-preview
+EX_TheLamplighter,short_summary,3,Those who seize credit are forgotten; those who light the way endure.,"Humility, Integrity, Recognition, Wisdom",gemini-3.1-pro-preview
+EX_TheLamplighter,short_summary,1,A small light kept burning is a promise that someone still cares.,"Belonging, Care, Compassion, Kindness, Solidarity",gpt-5.4
+EX_TheLamplighter,short_summary,2,"True service is often unseen and unthanked, yet it holds a community together.","Care, Duty, Humility, Solidarity",gpt-5.4
+EX_TheLamplighter,short_summary,3,Kindness offered in the dark outlives the one who offers it.,"Compassion, Kindness, Love, Redemption",gpt-5.4
