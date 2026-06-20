@@ -1,13 +1,27 @@
-# Book-to-Moral pipeline (unified Python workflow)
+# Book-to-Moral pipeline
 
-Turns each book's full text into story morals and then into value labels, across
-a directory of texts, emitting one tidy LONG-format table.
+A command-line workflow that reads the moral values out of books at scale.
 
-This is a single Python-driven orchestration of four stages that previously
-lived as separate R scripts and one Jupyter notebook. The per-stage logic
-(prompts, JSON schemas, parsers, temperatures, token budgets, the label-order
-shuffle) was **ported verbatim** from those sources into `pipeline_stages.py`;
-the R/notebook originals are kept only as reference. Nothing calls R at runtime.
+**Input.** A folder of plain-text books — one `.txt` file per book. Each file's
+name encodes its `book_id` (the filename) and a `culture` code (the prefix
+before the first underscore, e.g. `DE_…`, `JP_…`).
+
+**What it does.** For every book, the pipeline:
+
+1. **Summarizes** the full text — first into a chunk-by-chunk plot summary, then
+   condenses that into a one-paragraph summary.
+2. **Generates morals** — three short, pithy "morals of the story" from each of
+   three views of the book: its *full text*, its *chunk summary*, and its *short
+   summary*.
+3. **Labels values** — tags each moral with values from a fixed 62-label
+   taxonomy (e.g. *Care*, *Justice*, *Loyalty*).
+
+Multiple models can run each step, so you can compare how different models read
+the same book. Every step is cached, so reruns resume where they left off.
+
+**Output.** Tidy tables (CSV + Parquet): a long table with one row per assigned
+value (book × view × moral × value), a collapsed one-row-per-moral table with
+its unique values, and a per-book table of the summaries themselves.
 
 ---
 
@@ -15,8 +29,8 @@ the R/notebook originals are kept only as reference. Nothing calls R at runtime.
 
 | File | Role |
 |------|------|
-| `pipeline_config.py` | All parameters + the verbatim prompts/JSON schemas. The single place to change models, K, language, throttle, paths. |
-| `pipeline_stages.py` | The four stages, ported from the R scripts / notebook. Text in → text/structured out. Includes the API call layer (retry + throttle) and the `--mock` stubs. |
+| `pipeline_config.py` | All parameters plus the prompts/JSON schemas. The single place to change models, K, language, throttle, paths. |
+| `pipeline_stages.py` | The four stages (text in → text/structured out), plus the API call layer (retry + throttle) and the `--mock` stubs. |
 | `run_pipeline.py` | The orchestrator: discovery, the per-book DAG, caching, checkpoint/resume, fail-soft error handling, progress logging, and the final table. CLI entry point. |
 | `Values_Taxonomy.csv` | The value taxonomy. Column 1 (`rokeach_value`, 62 labels) is the label set; column 2 (`schwartz_value`) is the downstream grouping. |
 | `requirements.txt` | Python dependencies. |
@@ -27,14 +41,14 @@ the R/notebook originals are kept only as reference. Nothing calls R at runtime.
 > Supply your own `.txt` files via `--input-dir`. The `example/` folder is the
 > only bundled, runnable sample.
 
-### Stage → source mapping
+### Stages and default models
 
-| Stage | Ported from | Model(s) — default |
-|-------|-------------|--------------------|
-| A. Chunk summary | `chunkSummary_API_GPT.ipynb` | `gpt-5.4-mini` |
-| B. Short summary (condenser) | `storyMorals_ChunkSummaryCondenser_API.R` | `gpt-5.4-mini` |
-| C. Moral generation (3 morals) | `storyMorals_API.R` | `gpt-5.4` **and** `gemini-3.1-pro-preview` |
-| D. Value labeling | `storyMorals_ValueExtraction_API.R` | `gpt-5.4` **and** `gemini-3.1-pro-preview` |
+| Stage | Does | Default model(s) |
+|-------|------|-------------------|
+| A. Chunk summary | token-chunks the full text, summarizes each chunk | `gpt-5.4-mini` |
+| B. Short summary | condenses the chunk summary to one paragraph | `gpt-5.4-mini` |
+| C. Moral generation | writes 3 morals per view | `gpt-5.4` **and** `gemini-3.1-pro-preview` |
+| D. Value labeling | tags each moral with taxonomy values | `gpt-5.4` **and** `gemini-3.1-pro-preview` |
 
 Stages C and D run a **full cross**: each moral-generation model produces its own
 3 morals per condition, and **every labeling model labels every moral** (so
@@ -244,24 +258,22 @@ One bad book never aborts the corpus.
 
 ---
 
-## Notes / minimal interface changes
+## Implementation notes
 
-- **Stage A (chunk summary)** lived only inside the Jupyter notebook. Its
-  functions (`read_text_file`, token chunking, per-chunk summarization, the
-  `SYSTEM_PROMPT` / `USER_PROMPT_TEMPLATE`) were lifted **verbatim** into
-  `pipeline_stages.py` so they are callable per book. Logic unchanged; the
-  notebook's batch loop/CSV checkpoint was replaced by this orchestrator's
-  per-book caching. The default chunk/short model is `gpt-5.4-mini` (the
-  notebook's model); override with `--chunk-model` / `--short-model`, or force a
-  single model everywhere with `--model`.
-- **Stages B/C/D** were ported from R `httr`/`httr2` calls to the Python
-  `openai` SDK (and `requests` for Anthropic/Gemini/Qwen), preserving prompts,
-  the `pithy_morals` JSON schema, `extract_json_array` (strip fences, keep the
-  **last** `[...]` block), the one-paragraph condenser prompt, and all temps.
-- **`run_seed` semantics.** R drew a random per-row seed and saved it for
-  resume. We derive it deterministically from the master `--run-seed`, giving
-  the same reproducibility plus stable reruns.
-- **Concurrency.** The current driver labels sequentially behind the global
-  `THROTTLE_RPS` rate gate — simplest and fully idempotent for K=1, single
-  model. `MAX_ACTIVE` is carried in config for a future parallel labeling path;
-  it is not yet used to fan out in-flight requests.
+- **Chunking.** Stage A splits the full text into fixed token windows
+  (`CHUNK_SIZE_TOKENS`, `o200k_base` encoding), summarizes each, and concatenates
+  — so it scales to books of any length.
+- **Label parsing.** Stage D expects a JSON array of taxonomy labels; the parser
+  strips code fences and keeps the **last** `[...]` block in the reply. Models
+  occasionally return a label outside the taxonomy — these are kept as-is, not
+  silently dropped, so you can audit/filter them downstream.
+- **Determinism.** Generation runs at `temperature=0`, and each moral's
+  label-order shuffle is seeded deterministically from `--run-seed`, so the same
+  command reproduces the same results (the per-row seed is saved in `run_seed`).
+- **API endpoints.** OpenAI/Qwen use a JSON-schema-constrained response; Gemini
+  uses JSON response mode. Add models by name — the provider is inferred from the
+  model prefix (`gpt-`, `gemini-`, `claude-`, `qwen-`) and the matching API key
+  is read from the environment.
+- **Concurrency.** Labeling runs sequentially behind the global `--throttle-rps`
+  rate gate. `--max-active` is reserved for a future parallel labeling path and
+  is not yet used to fan out in-flight requests.
